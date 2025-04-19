@@ -4,7 +4,6 @@ import OrderContents from "./components/OrderContents";
 import OrderTotals from "./components/OrderTotals";
 import TipPercentage from "./components/TipPercentage";
 import { menuItems } from "./data/db"
-import useOrder from "./hooks/useOrder"
 import { initialState, orderReducer } from "./reducers/order-reducer";
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
   /**
    * importando el hook de order y la funcion de addItem
    */
-  const { placeOrder} = useOrder();
 
   const [state, dispatch] = useReducer(orderReducer, initialState)
 
